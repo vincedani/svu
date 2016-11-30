@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="StudentVsUniversity.Popups.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StudentVsUniversity.Popups"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Border Grid.Column="0" BorderBrush="WhiteSmoke" BorderThickness="5 5 5 5" MinWidth="350" MinHeight="400" Background="DarkSeaGreen">
+        <Grid Margin="50">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <CheckBox Grid.Row="0" x:Name="SoundsCheckBox" Tapped="SoundsCheckBoxChecked" HorizontalAlignment="Left" Loaded="SetupParentHierarchy">
+                <TextBlock Text="Sounds" FontSize="36" Margin="20,0,0,0"/>
+            </CheckBox>
+
+            <CheckBox Grid.Row="1" x:Name="NotificationsCheckBox" Tapped="NotificationsCheckBoxChecked" HorizontalAlignment="Left">
+                <TextBlock Text="Notifications" FontSize="36" Margin="20,0,0,0"/>
+            </CheckBox>
+
+            <Button Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="60" Content="OK!" FontSize="36" Margin="20, 0, 0, 0" Tapped="SaveSettings"/>
+        </Grid>
+
+    </Border>
+</UserControl>
